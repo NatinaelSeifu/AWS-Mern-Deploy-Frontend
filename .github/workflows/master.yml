@@ -1,4 +1,4 @@
-name: Deploy Test API
+name: FrontEnd-deploy
 
 on:
   push:
