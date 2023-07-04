@@ -28,7 +28,7 @@ jobs:
           -e PORT=${{vars.API_PORT}} \
           -e NODE_ENV=${{vars.API_NODE_ENV}} \
           -e MONGO_URI=${{secrets.MONGO_URI}} \
-          -e JWT_SECRET=${{secrets.API_JWT_SECRET}} \
+          -e JWT_SECRET=${{secrets.JWT_SECRET}} \
           -e GMAIL_USERNAME=${{secrets.GMAIL_USERNAME}} \
           -e GMAIL_PASSWORD=${{secrets.GMAIL_PASSWORD}} \
           --name frontend_api_container \
