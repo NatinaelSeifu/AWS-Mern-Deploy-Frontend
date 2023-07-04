@@ -20,7 +20,7 @@ jobs:
         run: |
           docker build -t frontend_api_image .
 
-      - name: Deploy Test API
+      - name: Deploy Frontend API
         run: |
           docker stop frontend_api_container || true
           docker rm frontend_api_container || true
@@ -31,7 +31,7 @@ jobs:
           -e JWT_SECRET=${{secrets.API_JWT_SECRET}} \
           -e GMAIL_USERNAME=${{secrets.GMAIL_USERNAME}} \
           -e GMAIL_PASSWORD=${{secrets.GMAIL_PASSWORD}} \
-          --name test_api_container \
+          --name frontend_api_container \
           -p ${{vars.PORT}}:${{vars.PORT}} \
           frontend_api_image:latest
 
