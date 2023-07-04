@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: self-hosted-frontend
+    runs-on: [self-hosted, frontend]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
         run: |
           whoami
 
-      - name: Build Test API Docker image
+      - name: Build Frontend API Docker image
         run: |
           docker build -t frontend_api_image .
 
